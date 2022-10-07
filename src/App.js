@@ -257,7 +257,7 @@ function App() {
             <AddForm setProducts={setProducts} products={products} />
           </Route>
           <Route path="/accountinfo" >
-            <AccountInfo currentUser={currentUser} isAdmin={isAdmin} />
+            <AccountInfo currentUser={currentUser} isAdmin={isAdmin} setOnLog={setOnLog} />
           </Route>
           <Route path="/cart" >
             <Cart cart={cart} handleDelete={handleDelete} handlePlaceOrder={handlePlaceOrder} />

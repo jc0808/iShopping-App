@@ -24,6 +24,7 @@ function Nav({ currentUser, cartNum, isAdmin,setOnLog}) {
     function handleLogOut(){
         setOnLog(false);
         navigate.push("/")
+        window.location.reload()
     }
     return (
         <div className="navigation">

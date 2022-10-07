@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
-function AccountInfo({ currentUser, isAdmin }) {
+function AccountInfo({ currentUser, isAdmin, setOnLog }) {
 
+
+    const navigate = useHistory();
     const backStyle = {
         "color": "blue",
         "marginLeft": "-320px"
@@ -25,7 +27,8 @@ function AccountInfo({ currentUser, isAdmin }) {
                         "content-type": "application/json"
                     }
                 })
-
+                setOnLog(false);
+                navigate.push("/")
                 window.location.reload()
             }
         }
