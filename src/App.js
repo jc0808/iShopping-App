@@ -263,7 +263,7 @@ function App() {
             <Cart cart={cart} handleDelete={handleDelete} handlePlaceOrder={handlePlaceOrder} />
           </Route>
           <Route path="/home" >
-            <Home currentUser={currentUser} products={products} handleAddOnCart={handleAddOnCart} cartNum={cartNum} isAdmin={isAdmin} handleDeleteItem={handleDeleteItem} />
+            <Home currentUser={currentUser} products={products} handleAddOnCart={handleAddOnCart} cartNum={cartNum} isAdmin={isAdmin} handleDeleteItem={handleDeleteItem} setOnLog={setOnLog} />
           </Route>
           <Route path="/confirmation" >
             <ComfirmationPage currentUser={currentUser} />

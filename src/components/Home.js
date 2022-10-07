@@ -3,7 +3,7 @@ import CardStack from "./CardStack";
 import Nav from "./Nav";
 
 
-function Home({ currentUser, products, handleAddOnCart, cartNum, isAdmin, handleDeleteItem }) {
+function Home({ currentUser, products, handleAddOnCart, cartNum, isAdmin, handleDeleteItem , setOnLog}) {
 
     //remember to change the addform to add a select for the categories
 
@@ -31,7 +31,7 @@ function Home({ currentUser, products, handleAddOnCart, cartNum, isAdmin, handle
     return (<div>
 
         <div>
-            <Nav currentUser={currentUser} cartNum={cartNum} isAdmin={isAdmin} />
+            <Nav currentUser={currentUser} cartNum={cartNum} isAdmin={isAdmin} setOnLog={setOnLog} />
         </div>
         <div className="aisle">
             <h1>Fruits and vegetables</h1>

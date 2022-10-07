@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useHistory } from "react-router-dom"
 
 
-function Nav({ currentUser, cartNum, isAdmin }) {
+function Nav({ currentUser, cartNum, isAdmin,setOnLog}) {
 
     const navigate = useHistory();
 
@@ -22,8 +22,8 @@ function Nav({ currentUser, cartNum, isAdmin }) {
     const styleLogOut = { color: "yellow", padding: "12px", display: "inline-block", textDecoration: "none", marginLeft: "20px", "cursor": "pointer" }
 
     function handleLogOut(){
-        
-        navigate.push("/");
+        setOnLog(false);
+        navigate.push("/")
     }
     return (
         <div className="navigation">
@@ -35,7 +35,7 @@ function Nav({ currentUser, cartNum, isAdmin }) {
                 <NavLink to="/users" style={admin}>Users</NavLink>
                 <NavLink to="/cart" style={styleCart} >Cart🛒({cartNum})</NavLink>
                 <NavLink to="/accountinfo" style={linkStyles} >Account</NavLink>
-                <div style={styleLogOut} onClick={() => window.location.reload()}>Logout</div>
+                <div style={styleLogOut} onClick={handleLogOut}>Logout</div>
 
 
             </div>
