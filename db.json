@@ -1,0 +1,182 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Berries",
+      "image": "https://images.unsplash.com/photo-1425934398893-310a009a77f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ymx1ZSUyMGJlcnJpZXN8ZW58MHx8MHx8&w=1000&q=80",
+      "productPrice": 3.99,
+      "quantity": 1,
+      "category": "fruit"
+    },
+    {
+      "id": 2,
+      "productName": "Fanta",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_65db2c37-f185-4eb3-9013-c96bd3c96b3b?wid=488&hei=488&fmt=pjpeg",
+      "productPrice": 2.99,
+      "quantity": 1,
+      "category": "beverage"
+    },
+    {
+      "id": 3,
+      "productName": "Doritos Cool Ranch",
+      "image": "https://www.meijer.com/content/dam/meijer/product/0002/84/0051/63/0002840051631_0_A1C1_0600.png",
+      "productPrice": 1.99,
+      "quantity": 1,
+      "category": "snack"
+    },
+    {
+      "id": 4,
+      "productName": "Oral B ToothBrush",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_561c60a8-1603-45ea-b36a-80e4f0bc9628?wid=488&hei=488&fmt=pjpeg",
+      "productPrice": 6.99,
+      "quantity": 1,
+      "category": "personal care"
+    },
+    {
+      "id": 5,
+      "productName": "Suavitel",
+      "image": "http://mobileimages.lowes.com/productimages/7fb1a537-1b1b-42c1-bef5-3f212e146b55/14958887.jpg",
+      "productPrice": 10.99,
+      "quantity": 1,
+      "category": "household"
+    },
+    {
+      "id": 6,
+      "productName": "Paper Towel",
+      "image": "http://mobileimages.lowes.com/productimages/64f5e233-b7fb-47a0-8621-e8fdb9d0b938/08907167.jpg",
+      "productPrice": 8.99,
+      "quantity": 1,
+      "category": "household"
+    },
+    {
+      "id": 7,
+      "productName": "Toilet Paper",
+      "image": "https://images.heb.com/is/image/HEBGrocery/000912650",
+      "productPrice": 7.5,
+      "quantity": 1,
+      "category": "household"
+    },
+    {
+      "id": 8,
+      "productName": "Detergent",
+      "image": "https://images.ctfassets.net/snqjgnra1eqk/4cMwMtjKX6JqEXYT6LKxnB/ce4db09969007f07f4c8239dbf9a6434/92OZ_HeavyDutyHygenicClean_v04_smpl_1920.jpg?fm=png",
+      "productPrice": 6.89,
+      "quantity": 1,
+      "category": "household"
+    },
+    {
+      "id": 9,
+      "productName": "Shampoo",
+      "image": "https://i5.walmartimages.com/asr/a49bb039-09d6-4f0e-afaa-c78bf2243c13.2b8e43da0c6dbbfa55fca61dae548049.jpeg",
+      "productPrice": 5.99,
+      "quantity": 1,
+      "category": "personal care"
+    },
+    {
+      "id": 10,
+      "productName": "Deodorant",
+      "image": "https://images.heb.com/is/image/HEBGrocery/001455667",
+      "productPrice": 3,
+      "quantity": 1,
+      "category": "personal care"
+    },
+    {
+      "id": 11,
+      "productName": "Toothpaste",
+      "image": "https://www.beautytheshop.com/imgs/productos_cosmetica/resized/680x680/8001090673848.jpg",
+      "productPrice": 2.79,
+      "quantity": 1,
+      "category": "personal care"
+    },
+    {
+      "id": 12,
+      "productName": "Cheetos",
+      "image": "https://i.ebayimg.com/images/g/gTsAAOSwpZVe1kXL/s-l640.jpg",
+      "productPrice": 2,
+      "quantity": 1,
+      "category": "snack"
+    },
+    {
+      "id": 13,
+      "productName": "Almond Cereal",
+      "image": "https://images.heb.com/is/image/HEBGrocery/001939884?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
+      "productPrice": 6.2,
+      "quantity": 1,
+      "category": "snack"
+    },
+    {
+      "id": 14,
+      "productName": "Orange Juice",
+      "image": "https://images.heb.com/is/image/HEBGrocery/000543834?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
+      "productPrice": 4,
+      "quantity": 1,
+      "category": "beverage"
+    },
+    {
+      "id": 15,
+      "productName": "Coke",
+      "image": "https://images.heb.com/is/image/HEBGrocery/001397056",
+      "productPrice": 2.99,
+      "quantity": 1,
+      "category": "beverage"
+    },
+    {
+      "id": 16,
+      "productName": "Welch's Juice",
+      "image": "https://i5.walmartimages.com/asr/7f5e0f99-b866-4526-a679-fe3f9b66c52b_1.648d68b858834d6a8c4fa88054d01dc4.jpeg",
+      "productPrice": 4.99,
+      "quantity": 1,
+      "category": "beverage"
+    },
+    {
+      "id": 17,
+      "productName": "Tomato",
+      "image": "https://t4.ftcdn.net/jpg/02/32/98/31/360_F_232983161_9lmUyHKnWbLW0vQPvWCrp5R5DSpexhbx.jpg",
+      "productPrice": 1,
+      "quantity": 1,
+      "category": "vegetable"
+    },
+    {
+      "id": 18,
+      "productName": "Potatoes",
+      "image": "https://images.heb.com/is/image/HEBGrocery/000318982",
+      "productPrice": 3,
+      "quantity": 1,
+      "category": "vegetable"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Joshua",
+      "address": "1320 Rogers drive",
+      "lastname": "Campos",
+      "username": "admin",
+      "password": "admin",
+      "cart": [],
+      "admin": true
+    },
+    {
+      "id": 2,
+      "name": "Lucas",
+      "address": "123 Saint Louis St",
+      "lastname": "Campos",
+      "username": "lucas",
+      "password": "lucas1",
+      "cart": [],
+      "admin": false
+    }
+  ],
+  "current": [
+    {
+      "id": 1,
+      "name": "Joshua",
+      "address": "1320 Rogers drive",
+      "lastname": "Campos",
+      "username": "admin",
+      "password": "admin",
+      "cart": [],
+      "admin": true
+    }
+  ]
+}
