@@ -11,29 +11,38 @@ function AccountInfo({ currentUser, isAdmin, setOnLog }) {
     };
 
     const [confirm, setConfirm] = useState(false);
+    const [reConfirm, setReConfirm] = useState(false);
 
 
     function handleConfirm() {
+        
         setConfirm(() => !confirm);
+    }
+
+    function handleReConfirm() {
+        
+        setReConfirm(() => !reConfirm);
+        console.log("reconfirmed")
     }
 
     useEffect(() => {
 
         if (currentUser !== null) {
-            if (confirm) {
+            if (reConfirm) {
                 fetch(`https://ishopping-app-database-server.herokuapp.com/users/${currentUser.id}`, {
                     method: "DELETE",
                     headers: {
                         "content-type": "application/json"
                     }
                 })
-                setOnLog(false);
-                navigate.push("/")
-                window.location.reload()
+                .then(() => {
+                    navigate.push("/");
+                    window.location.reload()
+                })
             }
         }
 
-    }, [confirm])
+    }, [reConfirm])
 
     const admin = !isAdmin ? { background: "red", color: "white" } : { display: "none" };
 
@@ -62,8 +71,8 @@ function AccountInfo({ currentUser, isAdmin, setOnLog }) {
             <label style={{ color: "red" }}>Are you sure you want to delete your account?</label>
 
             <div>
-                <button style={{ background: "red", color: "white" }} >Confirm</button>
-                <button style={{ background: "gray", color: "white", marginLeft: '50px' }} onClick={() => setConfirm(false)}>Cancel</button>
+                <button style={{ background: "red", color: "white" }} onClick={handleReConfirm}>Confirm</button>
+                <button style={{ background: "gray", color: "white", marginLeft: '50px' }} onClick={() => !confirm}>Cancel</button>
             </div>
 
         </>
