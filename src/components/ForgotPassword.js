@@ -20,7 +20,7 @@ function ForgotPassword() {
     const navigate = useHistory();
 
     useEffect(() => {
-        fetch('http://localhost:4000/users')
+        fetch('https://ishopping-app-database-server.herokuapp.com/users')
             .then(r => r.json())
             .then(data => setUsers(data))
     }, [])
@@ -55,7 +55,7 @@ function ForgotPassword() {
         e.preventDefault();
         if (password === cPassword) {
             if (id !== 1) {
-                fetch(`http://localhost:4000/users/${id}`, {
+                fetch(`https://ishopping-app-database-server.herokuapp.com/users/${id}`, {
                     method: "PATCH",
                     headers: {
                         "content-type": "application/json"

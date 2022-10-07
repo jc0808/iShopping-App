@@ -30,17 +30,17 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://localhost:4000/users')
+    fetch('https://ishopping-app-database-server.herokuapp.com/users')
       .then(r => r.json())
       .then(data => setUsers(data))
 
-    fetch('http://localhost:4000/products')
+    fetch('https://ishopping-app-database-server.herokuapp.com/products')
       .then(r => r.json())
       .then(data => setProducts(data))
 
     if (currentUser === null) {
       if (user === null) {
-        fetch('http://localhost:4000/current')
+        fetch('https://ishopping-app-database-server.herokuapp.com/current')
           .then(r => r.json())
           .then(data => setUser(data))
 
@@ -85,7 +85,7 @@ function App() {
   function returnUserId(id) {
     setCurrentUser(users[id - 1])
 
-    fetch('http://localhost:4000/current/1', {
+    fetch('https://ishopping-app-database-server.herokuapp.com/current/1', {
       method: "PATCH",
       headers: {
         "content-type": "application/json"
@@ -124,7 +124,7 @@ function App() {
   //update cart in the server
   useEffect(() => {
     if (currentUser !== null) {
-      fetch(`http://localhost:4000/users/${currentUser.id}`, {
+      fetch(`https://ishopping-app-database-server.herokuapp.com/users/${currentUser.id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json"
@@ -174,7 +174,7 @@ function App() {
   function handleAdmin(isChecked, id) {
     const findUser = users.find(user => { return user.id === parseInt(id) });
 
-    fetch(`http://localhost:4000/users/${id}`, {
+    fetch(`https://ishopping-app-database-server.herokuapp.com/users/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json"
@@ -237,7 +237,7 @@ function App() {
     console.log(findItem)
 
     if (findItem) {
-      fetch(`http://localhost:4000/products/${findItem.id}`, {
+      fetch(`https://ishopping-app-database-server.herokuapp.com/products/${findItem.id}`, {
         method: "DELETE",
         headers: {
           "content-type": "application/json"
@@ -290,137 +290,3 @@ function App() {
 }
 
 export default App;
-
-
-// const [userInfo, setUserInfo] = useState([]);
-
-// const [currentUser, setCurrentUser] = useState(null);
-
-// const currentLocation = useLocation().pathname;
-
-// const [products, setProducts] = useState([]);
-
-// const [cart, setCart] = useState([]);
-
-// const [c, setC] = useState([...cart]);
-
-// //currentUser !== null ? currentUser.cart.length : 0;
-
-// useEffect(() => {
-//   fetch('http://localhost:4000/users')
-//     .then(r => r.json())
-//     .then(data => setUserInfo(data))
-
-//   fetch('http://localhost:4000/products')
-//     .then(r => r.json())
-//     .then(data => setProducts(data))
-
-// }, [])
-
-// function returnUserId(id) {
-//   userInfo.forEach(user => {
-//     if (user.id === id) {
-//       setCurrentUser(userInfo[id - 1])
-//     }
-//   })
-// }
-
-
-// function returnUsername(username) {
-//   userInfo.forEach(user => {
-//     if (user.username === username) {
-//       setCurrentUser(userInfo[user.id - 1])
-//     }
-//   })
-// }
-
-// function location() {
-//   if (currentLocation === "/createuser") {
-//     return (<Route path="/CreateUser">
-//       <CreateUser returnUsername={returnUsername} />
-//     </Route>)
-//   } else {
-//     return (<Login user={userInfo} returnUserId={returnUserId} />)
-//   }
-// }
-
-// setTimeout(() => {
-
-//   if (currentUser !== null) {
-//     setCart(currentUser.cart)
-//   }
-// }, 200)
-
-// function handleAddOnCart(name, image, price) {
-
-//   const newCartProduct = {
-//     "name": name,
-//     "image": image,
-//     "price": price,
-//     "quantity": 1
-//   };
-
-
-//   if (!c.includes(newCartProduct)) {
-//     setC([...c, newCartProduct])
-//     console.log(newCartProduct)
-//   }
-
-
-// }
-
-// useEffect(() => {
-//   if (currentUser !== null) {
-
-//     fetch(`http://localhost:4000/users/${currentUser.id}`, {
-//       method: "PATCH",
-//       headers: {
-//         "content-type": "application/json"
-//       },
-//       body: JSON.stringify({ cart: c })
-//     })
-//       .then(r => r.json())
-//       .then(d => {
-//         setCurrentUser(d);
-
-//       })
-
-//     // const update = userInfo.map(user => {
-//     //   if (user.id === currentUser.id) {
-//     //     return user
-//     //   } else {
-//     //     return user
-//     //   }
-//     // });
-
-//     // setUserInfo(update);
-//   }
-
-
-// }, [c])
-
-// return (
-//   <div className="App">
-
-//     {currentUser !== null ?
-//       <Switch>
-//         <Route path="/addform" >
-//           <AddForm />
-//         </Route>
-//         <Route path="/accountinfo" >
-//           <AccountInfo currentUser={currentUser} />
-//         </Route>
-//         <Route path="/cart" >
-//           <Cart cart={cart} />
-//         </Route>
-//         <Route path="/" >
-//           <Home currentUser={currentUser} products={products} handleAddOnCart={handleAddOnCart} cartNum={cart} />
-//         </Route>
-//       </Switch> :
-//       location()
-//     }
-//   </div >
-// );
-// }
-
-// export default App;

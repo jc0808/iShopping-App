@@ -22,7 +22,7 @@ function Users({ users, handleAdmin, setUsers }) {
         const filtered = users.filter(user => { return user.id !== findUser.id });
 
         if (findUser) {
-            fetch(`http://localhost:4000/users/${findUser.id}`, {
+            fetch(`https://ishopping-app-database-server.herokuapp.com/users/${findUser.id}`, {
                 method: "DELETE",
                 headers: {
                     "content-type": "application/json"

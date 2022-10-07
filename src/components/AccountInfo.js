@@ -19,7 +19,7 @@ function AccountInfo({ currentUser, isAdmin }) {
 
         if (currentUser !== null) {
             if (confirm) {
-                fetch(`http://localhost:4000/users/${currentUser.id}`, {
+                fetch(`https://ishopping-app-database-server.herokuapp.com/users/${currentUser.id}`, {
                     method: "DELETE",
                     headers: {
                         "content-type": "application/json"
