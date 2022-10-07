@@ -1,8 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
+import { NavLink, useHistory } from "react-router-dom"
 
 
 function Nav({ currentUser, cartNum, isAdmin }) {
+
+    const navigate = useHistory();
 
     const linkStyles = {
         display: "inline-block",
@@ -19,6 +21,10 @@ function Nav({ currentUser, cartNum, isAdmin }) {
 
     const styleLogOut = { color: "yellow", padding: "12px", display: "inline-block", textDecoration: "none", marginLeft: "20px", "cursor": "pointer" }
 
+    function handleLogOut(){
+        
+        navigate.push("/");
+    }
     return (
         <div className="navigation">
             <h1>iShooping</h1>
