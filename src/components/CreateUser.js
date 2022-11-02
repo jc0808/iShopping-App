@@ -59,7 +59,7 @@ function CreateUser({ setCurrentUser, setOnLog }) {
                 "login": false
             };
 
-            fetch('https://ishopping-app-database-server.herokuapp.com/users', {
+            fetch('https://ishopping-app-server.herokuapp.com//users', {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
