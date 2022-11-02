@@ -55,7 +55,7 @@ function ForgotPassword() {
         e.preventDefault();
         if (password === cPassword) {
             if (id !== 1) {
-                fetch(`https://ishopping-app-database-server.herokuapp.com/users/${id}`, {
+                fetch(`https://ishopping-app-server.herokuapp.com/users/${id}`, {
                     method: "PATCH",
                     headers: {
                         "content-type": "application/json"
