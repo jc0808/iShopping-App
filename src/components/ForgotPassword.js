@@ -20,7 +20,7 @@ function ForgotPassword() {
     const navigate = useHistory();
 
     useEffect(() => {
-        fetch('https://ishopping-app-database-server.herokuapp.com/users')
+        fetch('https://ishopping-app-server.herokuapp.com/users')
             .then(r => r.json())
             .then(data => setUsers(data))
     }, [])
