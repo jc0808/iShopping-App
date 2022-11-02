@@ -45,7 +45,7 @@ function AddForm({ setProducts, products }) {
             "category": category
         }
 
-        fetch('https://ishopping-app-database-server.herokuapp.com/products', {
+        fetch('https://ishopping-app-server.herokuapp.com//products', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
