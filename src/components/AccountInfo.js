@@ -29,7 +29,7 @@ function AccountInfo({ currentUser, isAdmin, setOnLog }) {
 
         if (currentUser !== null) {
             if (reConfirm) {
-                fetch(`https://ishopping-app-database-server.herokuapp.com/users/${currentUser.id}`, {
+                fetch(`https://ishopping-app-server.herokuapp.com/users/${currentUser.id}`, {
                     method: "DELETE",
                     headers: {
                         "content-type": "application/json"
