@@ -30,17 +30,17 @@ function App() {
 
 
   useEffect(() => {
-    fetch('https://ishopping-app-database-server.herokuapp.com/users')
+    fetch('https://ishopping-app-server.herokuapp.com/users')
       .then(r => r.json())
       .then(data => setUsers(data))
 
-    fetch('https://ishopping-app-database-server.herokuapp.com/products')
+    fetch('https://ishopping-app-server.herokuapp.com/products')
       .then(r => r.json())
       .then(data => setProducts(data))
 
     if (currentUser === null) {
       if (user === null) {
-        fetch('https://ishopping-app-database-server.herokuapp.com/current')
+        fetch('https://ishopping-app-server.herokuapp.com/current')
           .then(r => r.json())
           .then(data => setUser(data))
 
@@ -85,7 +85,7 @@ function App() {
   function returnUserId(id) {
     setCurrentUser(users[id - 1])
 
-    fetch('https://ishopping-app-database-server.herokuapp.com/current/1', {
+    fetch('https://ishopping-app-server.herokuapp.com/current/1', {
       method: "PATCH",
       headers: {
         "content-type": "application/json"
@@ -124,7 +124,7 @@ function App() {
   //update cart in the server
   useEffect(() => {
     if (currentUser !== null) {
-      fetch(`https://ishopping-app-database-server.herokuapp.com/users/${currentUser.id}`, {
+      fetch(`https://ishopping-app-server.herokuapp.com/users/${currentUser.id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json"
@@ -174,7 +174,7 @@ function App() {
   function handleAdmin(isChecked, id) {
     const findUser = users.find(user => { return user.id === parseInt(id) });
 
-    fetch(`https://ishopping-app-database-server.herokuapp.com/users/${id}`, {
+    fetch(`https://ishopping-app-server.herokuapp.com/users/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json"
@@ -237,7 +237,7 @@ function App() {
     console.log(findItem)
 
     if (findItem) {
-      fetch(`https://ishopping-app-database-server.herokuapp.com/products/${findItem.id}`, {
+      fetch(`https://ishopping-app-server.herokuapp.com/products/${findItem.id}`, {
         method: "DELETE",
         headers: {
           "content-type": "application/json"
